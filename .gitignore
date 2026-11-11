@@ -1,4 +1,6 @@
+# ==========================================
 # Recruitment Management & Analytics System
+# ==========================================
 
 # Virtual Environments
 .venv/
@@ -6,69 +8,121 @@ venv/
 env/
 ENV/
 
-# Python Bytecode & Cache
+# Python Bytecode and Cache
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.pycache
 
-# Environment & Secrets
+# Environment Variables and Secrets
 .env
 .env.*
 *.env
 secrets.yaml
 secrets.json
+*.pem
+*.key
 
 # Database Files
 *.db
 *.sqlite
 *.sqlite3
 
+# Keep the main recruitment database
+!data/database/
+!data/database/recruitment.db
+
 # Generated Data Directories
 data/raw/*
 data/processed/*
 data/exports/*
 
+# Keep directory placeholders
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/exports/.gitkeep
-!data/ground_truth/.gitkeep
 
-# Generated / Temporary Files
+# Keep required Ground Truth Files
+!data/ground_truth/
+data/ground_truth/*
+!data/ground_truth/.gitkeep
+!data/ground_truth/*.csv
+!data/ground_truth/*.json
+
+# Logs and Temporary Files
 *.log
 *.tmp
 *.bak
 *.swp
-*.csv
+*.cache
+
+# Generated Data Files
 *.xlsx
 *.parquet
 *.json.gz
 
-# Keep Ground Truth Reports in GitHub
-!data/ground_truth/*.csv
-
-# Testing & Coverage
+# Testing and Coverage
 .pytest_cache/
 .coverage
 htmlcov/
 coverage.xml
 *.cover
 
-# IDE / Editor
+# IDE and Editor
 .vscode/
 .idea/
 *.code-workspace
 *.suo
 *.user
 
-# OS Files
+# Operating System Files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Build & Distribution
+# Build and Distribution
 dist/
 build/
 *.egg-info/
 *.egg
+
+# Node.js (if used)
+node_modules/
+
+# Jupyter
+.ipynb_checkpoints/
+```
+
+### After saving `.gitignore`
+
+Run these commands from your project root:
+
+**1. Remove previously staged files from Git's index (your local files remain safe):**
+
+```powershell
+git rm -r --cached .
+```
+
+**2. Stage everything again using the updated `.gitignore`:**
+
+```powershell
+git add .
+```
+
+**3. Check the staged files:**
+
+```powershell
+git status
+```
+
+### Important checks
+
+Make sure:
+- `backend/`, `frontend/`, `docs/`, `scripts/`, and `tests/` are included.
+- `data/database/recruitment.db` is included.
+- `data/ground_truth/` CSV and JSON reports are included.
+- `data/exports/` generated exports remain excluded by default.
+- `.venv/`, secrets, and cache files are excluded.
+
+**Send me your `git status` output before committing.** I'll verify it with you.

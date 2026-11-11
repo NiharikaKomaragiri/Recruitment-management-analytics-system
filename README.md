@@ -1,33 +1,31 @@
 # Recruitment Management & Analytics System
 
-An end-to-end recruitment management and analytics platform built using Python, SQLAlchemy, SQLite, FastAPI, Pandas, and Streamlit.
+An end-to-end recruitment management and analytics platform built using **Python, SQLAlchemy, SQLite, FastAPI, Pandas, and Streamlit**.
 
-The system generates synthetic recruitment data, manages recruitment workflows, provides REST APIs, documents labelled anomaly scenarios, validates database integrity, and visualizes recruitment analytics through an interactive dashboard.
+The system generates synthetic recruitment data, manages recruitment workflows, provides REST APIs, validates database integrity, documents labelled anomaly scenarios, and visualizes recruitment analytics through an interactive dashboard.
 
-## 1. Project Overview
-
-The system manages the recruitment lifecycle, from job requisition creation and candidate applications through interviews, feedback, and offer management.
-
-### Key Features
+## Key Features
 
 - Synthetic recruitment data generation.
-- Relational database design and management.
-- Recruitment workflow management.
-- REST API development using FastAPI.
+- Relational database design using SQLite and SQLAlchemy.
+- Candidate and requisition management.
+- Application and interview workflow management.
+- Structured interview feedback and offer management.
+- REST APIs using FastAPI.
 - Data validation and integrity checks.
-- Labelled anomaly scenario generation.
-- CSV, JSON, and SQL data exports.
-- Interactive recruitment analytics dashboard.
-- Reproducible synthetic dataset generation and export verification.
+- Five labelled anomaly scenarios.
+- CSV, JSON, and SQL exports.
+- Interactive Streamlit analytics dashboard.
+- Reproducibility testing using SHA256 checksums.
 
-## 2. Technology Stack
+## Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Core development |
 | SQLite | Relational database |
 | SQLAlchemy | ORM and database operations |
-| Pandas | Data processing and analysis |
+| Pandas | Data processing |
 | NumPy | Numerical operations |
 | Faker | Synthetic data generation |
 | FastAPI | REST API development |
@@ -36,51 +34,42 @@ The system manages the recruitment lifecycle, from job requisition creation and 
 | Plotly | Data visualization |
 | Pytest | Automated testing |
 
-## 3. System Architecture
+## System Architecture
 
 ```text
-       SYNTHETIC DATA GENERATION
-                  |
-                  v
-           Data Generators
-                  |
-                  v
-           SQLite Database
-                  |
-       +----------+----------+
-       |          |          |
-       v          v          v
-    FastAPI    Analytics  Validation
-       |          |          |
-       v          v          v
-   REST APIs  Streamlit  Ground Truth
-              Dashboard    Reports
-       |
-       v
-   API Consumers
+Synthetic Data Generation
+          |
+          v
+     Data Generators
+          |
+          v
+    SQLite Database
+          |
+    +-----+------+
+    |            |
+    v            v
+  FastAPI     Analytics
+    |            |
+    v            v
+ REST APIs   Validation
+                 |
+                 v
+          Ground Truth Reports
 
-       DATABASE EXPORTS
-                  |
-                  v
-             CSV / JSON / SQL
+Database
+   |
+   v
+CSV / JSON / SQL Exports
+
+SQLite Database
+   |
+   v
+Streamlit Dashboard
 ```
 
-## 4. Recruitment Workflow
+## Dataset Summary
 
-1. Generate departments, skills, and interviewers.
-2. Generate candidate profiles and resume artifacts.
-3. Create job requisitions.
-4. Generate requisition approvals and screening rules.
-5. Generate candidate applications.
-6. Schedule interviews and assign interview panels.
-7. Generate structured interview feedback.
-8. Generate recruitment offers.
-9. Validate database records and generate anomaly scenarios.
-10. Export datasets and display recruitment analytics.
-
-## 5. Dataset Summary
-
-The final database contains 17 tables and 29,159 records.
+The generated database contains **17 tables and 29,159 records**.
 
 | Entity | Records |
 |---|---:|
@@ -103,21 +92,37 @@ The final database contains 17 tables and 29,159 records.
 | Audit Events | 0 |
 | **Total** | **29,159** |
 
-## 6. Database Design
+## Recruitment Workflow
 
-The SQLite database contains 17 relational tables covering the recruitment lifecycle.
+1. Generate departments, skills, and interviewers.
+2. Generate candidate profiles and resume artifacts.
+3. Create job requisitions.
+4. Generate requisition approvals and screening rules.
+5. Generate candidate applications.
+6. Schedule interviews and assign interview panels.
+7. Generate structured interview feedback.
+8. Generate recruitment offers.
+9. Validate database records and generate anomaly scenarios.
+10. Export datasets and display recruitment analytics.
 
-Primary keys and foreign keys maintain relationships between recruitment entities. Bridge tables manage many-to-many relationships, including candidate skills and interview panel assignments.
+## Database Design
 
-Application stage history stores recruitment stage transitions, providing a record of application progression.
+The database contains 17 relational tables covering the recruitment lifecycle.
 
-The `audit_events` table is included in the schema for future audit-event tracking. It currently contains zero records in the generated dataset.
+- Primary keys and foreign keys maintain relationships.
+- Bridge tables represent many-to-many relationships.
+- Application stage history records recruitment progression.
+- The `audit_events` table is included for future audit tracking and currently contains zero records.
 
-Detailed table definitions, relationships, constraints, and field descriptions are available in `docs/database_schema.md` and `docs/data_dictionary.md`.
+Detailed documentation:
 
-## 7. Anomaly Scenarios
+- `docs/database_schema.md`
+- `docs/data_dictionary.md`
+- `docs/architecture.md`
 
-Five labelled synthetic anomaly scenarios are included:
+## Anomaly Scenarios
+
+Five labelled synthetic anomaly scenarios are included.
 
 | ID | Anomaly |
 |---|---|
@@ -127,14 +132,14 @@ Five labelled synthetic anomaly scenarios are included:
 | ANOM-004 | Offer salary outside the approved band |
 | ANOM-005 | Closed requisition with active applications |
 
-Files are stored in:
+Files:
 
 - `data/ground_truth/anomaly_cases.csv`
 - `data/ground_truth/anomaly_cases.json`
 
 These are labelled test scenarios and do not intentionally corrupt the main recruitment database.
 
-## 8. Data Validation
+## Data Validation
 
 The validation module checks:
 
@@ -147,15 +152,11 @@ The validation module checks:
 - Interview scheduling consistency.
 - Application-requisition relationships.
 
-The final validation and automated test runs completed successfully.
+Validation reports are stored under `data/ground_truth/`.
 
-Reports are stored under `data/ground_truth/`.
+## Reproducibility Testing
 
-## 9. Reproducibility Testing
-
-Reproducibility was verified using two independent project copies.
-
-The same synthetic dataset was exported from both environments and compared using SHA256 file hashes.
+Reproducibility was tested using two independent project copies.
 
 | Metric | Result |
 |---|---:|
@@ -171,7 +172,7 @@ Timestamp normalization and consistent SQL index ordering were applied before th
 
 **Result:** All 37 export files matched byte-for-byte across both test runs.
 
-## 10. FastAPI Endpoints
+## FastAPI Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -185,9 +186,9 @@ Timestamp normalization and consistent SQL index ordering were applied before th
 | GET | `/api/v1/interviews` | Retrieve interviews |
 | GET | `/api/v1/offers` | Retrieve offers |
 
-Interactive API documentation is available through Swagger UI at `/docs`.
+Swagger documentation is available at `/docs`.
 
-## 11. Streamlit Dashboard
+## Streamlit Dashboard
 
 The dashboard provides:
 
@@ -200,75 +201,52 @@ The dashboard provides:
 - Candidate search and exploration.
 - Recent application records.
 
-The dashboard reads directly from the SQLite database.
-
-## 12. Project Structure
+## Project Structure
 
 ```text
 Recruitment Management & Analytics System/
-│
 ├── backend/
 │   ├── main.py
 │   ├── config.py
 │   └── src/
 │       ├── database/
-│       │   ├── models/
-│       │   ├── database.py
-│       │   └── init_db.py
 │       ├── generators/
-│       │   ├── master_data_generator.py
-│       │   ├── candidate_generator.py
-│       │   ├── requisition_generator.py
-│       │   ├── application_generator.py
-│       │   ├── interview_generator.py
-│       │   ├── feedback_generator.py
-│       │   ├── offer_generator.py
-│       │   ├── anomaly_generator.py
-│       │   ├── generator_export.py
-│       │   └── lin.py
 │       ├── analytics/
-│       │   └── validate_data.py
 │       ├── api/
 │       └── services/
-│
 ├── frontend/
 │   └── app.py
-│
 ├── data/
 │   ├── database/
 │   ├── raw/
 │   ├── processed/
 │   ├── exports/
 │   └── ground_truth/
-│
 ├── docs/
 ├── scripts/
 ├── tests/
-│   └── test_database.py
-│
-├── .vscode/
 ├── .gitignore
 ├── pytest.ini
 ├── requirements.txt
 └── README.md
 ```
 
-## 13. Installation and Setup
+## Installation and Setup
 
-### Clone the Repository
+### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/NiharikaKomaragiri/recruitment-management-analytics-system.git
 cd "Recruitment Management & Analytics System"
 ```
 
-### Create a Virtual Environment
+### 2. Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-### Activate the Environment
+### 3. Activate the environment
 
 Windows PowerShell:
 
@@ -276,69 +254,63 @@ Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
 ```
 
-### Install Dependencies
+### 4. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 14. Running the Application
+## Running the Application
 
-### Navigate to the Backend
+Run these commands from the project root unless otherwise specified.
 
-From the project root:
+### 1. Generate synthetic data
 
 ```powershell
 cd backend
-```
-
-### Generate Synthetic Data
-
-```powershell
 python -m src.generators.lin
 ```
 
-**Warning:** This pipeline drops and recreates the database tables. Run it only when you intend to regenerate the database.
+**Warning:** This pipeline drops and recreates database tables. Run it only when you intend to regenerate the database.
 
-### Generate Anomaly Scenarios
+### 2. Generate anomaly scenarios
 
 ```powershell
 python -m src.generators.anomaly_generator
 ```
 
-### Validate Database Records
+### 3. Validate database records
 
 ```powershell
 python -m src.analytics.validate_data
 ```
 
-### Export Database Records
+### 4. Export database records
 
 ```powershell
 python -m src.generators.generator_export
 ```
 
-### Start FastAPI
+### 5. Start FastAPI
 
 ```powershell
 python -m uvicorn main:app --reload
 ```
 
-API: `http://127.0.0.1:8000`
+- API: http://127.0.0.1:8000
+- Swagger UI: http://127.0.0.1:8000/docs
 
-Swagger documentation: `http://127.0.0.1:8000/docs`
+### 6. Start Streamlit Dashboard
 
-### Start Streamlit Dashboard
-
-Open another terminal in the project root and activate the virtual environment.
+Open another terminal in the project root, activate the virtual environment, and run:
 
 ```powershell
 python -m streamlit run frontend/app.py
 ```
 
-Dashboard: `http://localhost:8501`
+Dashboard: http://localhost:8501
 
-### Run Database Tests
+### 7. Run automated tests
 
 From the project root:
 
@@ -346,7 +318,7 @@ From the project root:
 python -m pytest -v
 ```
 
-## 15. Output Files
+## Output Files
 
 ### Data Exports
 
@@ -363,7 +335,7 @@ python -m pytest -v
 - Data validation summary.
 - Export checksums.
 
-## 16. Future Enhancements
+## Future Enhancements
 
 - Job posting and requisition creation interface.
 - Advanced candidate-job matching.
@@ -374,19 +346,13 @@ python -m pytest -v
 - Advanced recruitment forecasting.
 - Automated recruitment notifications.
 
-## 17. Conclusion
+## Conclusion
 
-The Recruitment Management & Analytics System demonstrates an end-to-end, data-driven recruitment workflow.
+The Recruitment Management & Analytics System demonstrates an end-to-end, data-driven recruitment workflow. It combines synthetic data generation, relational database management, REST API development, data quality validation, anomaly documentation, reproducibility testing, and interactive analytics in a single application.
 
-It combines synthetic data generation, relational database management, REST API development, data quality validation, anomaly scenario documentation, reproducibility testing, and interactive analytics in a single application.
+## Reproducibility Configuration
 
-### Reproducibility
+- **Random seed:** `20261022`
+- **Seed identifier:** `seed-20261022`
 
-The synthetic data generation process uses a fixed random seed
-to support repeatable dataset generation.
-
-Seed: [INSERT THE ACTUAL SEED USED BY YOUR GENERATOR]
-
-The source manifest and export summary are available in
-`data/exports/`.#   r e c r u i t m e n t - m a n a g e m e n t - a n a l y t i c s - s y s t e m  
- 
+The fixed seed supports repeatable synthetic data generation.
