@@ -1,0 +1,585 @@
+{
+    "project": "Recruitment Management & Analytics System",
+    "total_checks": 115,
+    "passed": 115,
+    "failed": 0,
+    "warnings": 0,
+    "overall_status": "PASSED",
+    "results": [
+        {
+            "check": "Database tables",
+            "status": "PASS",
+            "details": "17 tables found"
+        },
+        {
+            "check": "Primary key uniqueness: application_stage_history.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: applications.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: audit_events.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: candidate_skills.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: candidates.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: departments.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: feedbacks.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: interview_panel_assignments.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: interviewers.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: interviews.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: job_requisitions.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: offers.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: requisition_approvals.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: requisition_required_skills.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: resume_artifacts.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: screening_rules.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Primary key uniqueness: skills.id",
+            "status": "PASS",
+            "details": "0 duplicate values"
+        },
+        {
+            "check": "Foreign key integrity",
+            "status": "PASS",
+            "details": "0 foreign key violations"
+        },
+        {
+            "check": "Required values: application_stage_history.application_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: application_stage_history.to_stage",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: applications.application_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: applications.requisition_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: applications.candidate_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: applications.current_stage",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: applications.status",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: audit_events.entity_type",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: audit_events.entity_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: audit_events.action",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: audit_events.actor",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidate_skills.candidate_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidate_skills.skill_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidate_skills.proficiency",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidate_skills.is_primary",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidates.candidate_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidates.full_name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidates.email",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidates.education",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidates.experience_years",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: candidates.status",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: departments.department_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: departments.name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: departments.is_active",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: feedbacks.feedback_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: feedbacks.interview_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: feedbacks.interviewer_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: feedbacks.overall_score",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: feedbacks.recommendation",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interview_panel_assignments.interview_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interview_panel_assignments.interviewer_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interview_panel_assignments.role",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interview_panel_assignments.confirmed",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviewers.interviewer_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviewers.full_name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviewers.email",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviewers.max_interviews_per_week",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviewers.is_active",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.interview_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.application_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.round_number",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.round_name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.scheduled_start",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.scheduled_end",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.mode",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: interviews.status",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.requisition_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.department_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.job_title",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.employment_type",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.openings",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.currency",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.experience_required",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.remote_allowed",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: job_requisitions.status",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: offers.offer_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: offers.application_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: offers.offered_salary",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: offers.currency",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: offers.status",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: requisition_approvals.requisition_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: requisition_approvals.approver_name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: requisition_approvals.decision",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: requisition_required_skills.requisition_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: requisition_required_skills.skill_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: requisition_required_skills.is_mandatory",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: resume_artifacts.resume_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: resume_artifacts.candidate_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: resume_artifacts.version",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: resume_artifacts.file_name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: resume_artifacts.file_path",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: resume_artifacts.is_latest",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.rule_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.requisition_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.rule_type",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.rule_value",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.weight",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.is_knockout",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: screening_rules.is_active",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: skills.skill_id",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: skills.name",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: skills.category",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Required values: skills.is_active",
+            "status": "PASS",
+            "details": "0 null values"
+        },
+        {
+            "check": "Record count: departments",
+            "status": "PASS",
+            "details": "Expected 10, found 10"
+        },
+        {
+            "check": "Record count: skills",
+            "status": "PASS",
+            "details": "Expected 50, found 50"
+        },
+        {
+            "check": "Record count: interviewers",
+            "status": "PASS",
+            "details": "Expected 50, found 50"
+        },
+        {
+            "check": "Record count: candidates",
+            "status": "PASS",
+            "details": "Expected 2000, found 2000"
+        },
+        {
+            "check": "Record count: job_requisitions",
+            "status": "PASS",
+            "details": "Expected 100, found 100"
+        },
+        {
+            "check": "Record count: applications",
+            "status": "PASS",
+            "details": "Expected 3000, found 3000"
+        },
+        {
+            "check": "Record count: interviews",
+            "status": "PASS",
+            "details": "Expected 600, found 600"
+        },
+        {
+            "check": "Record count: offers",
+            "status": "PASS",
+            "details": "Expected 150, found 150"
+        },
+        {
+            "check": "Duplicate applications",
+            "status": "PASS",
+            "details": "0 duplicate candidate-requisition pairs"
+        },
+        {
+            "check": "Offer salary within approved range",
+            "status": "PASS",
+            "details": "0 salary violations"
+        },
+        {
+            "check": "Interview date consistency",
+            "status": "PASS",
+            "details": "0 invalid interview time ranges"
+        },
+        {
+            "check": "Application requisition relationships",
+            "status": "PASS",
+            "details": "0 applications with missing requisitions"
+        },
+        {
+            "check": "Skill count within target range",
+            "status": "PASS",
+            "details": "Found 50; target is 30 to 50"
+        }
+    ]
+}

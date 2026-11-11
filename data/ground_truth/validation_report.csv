@@ -1,0 +1,116 @@
+check,status,details
+Database tables,PASS,17 tables found
+Primary key uniqueness: application_stage_history.id,PASS,0 duplicate values
+Primary key uniqueness: applications.id,PASS,0 duplicate values
+Primary key uniqueness: audit_events.id,PASS,0 duplicate values
+Primary key uniqueness: candidate_skills.id,PASS,0 duplicate values
+Primary key uniqueness: candidates.id,PASS,0 duplicate values
+Primary key uniqueness: departments.id,PASS,0 duplicate values
+Primary key uniqueness: feedbacks.id,PASS,0 duplicate values
+Primary key uniqueness: interview_panel_assignments.id,PASS,0 duplicate values
+Primary key uniqueness: interviewers.id,PASS,0 duplicate values
+Primary key uniqueness: interviews.id,PASS,0 duplicate values
+Primary key uniqueness: job_requisitions.id,PASS,0 duplicate values
+Primary key uniqueness: offers.id,PASS,0 duplicate values
+Primary key uniqueness: requisition_approvals.id,PASS,0 duplicate values
+Primary key uniqueness: requisition_required_skills.id,PASS,0 duplicate values
+Primary key uniqueness: resume_artifacts.id,PASS,0 duplicate values
+Primary key uniqueness: screening_rules.id,PASS,0 duplicate values
+Primary key uniqueness: skills.id,PASS,0 duplicate values
+Foreign key integrity,PASS,0 foreign key violations
+Required values: application_stage_history.application_id,PASS,0 null values
+Required values: application_stage_history.to_stage,PASS,0 null values
+Required values: applications.application_id,PASS,0 null values
+Required values: applications.requisition_id,PASS,0 null values
+Required values: applications.candidate_id,PASS,0 null values
+Required values: applications.current_stage,PASS,0 null values
+Required values: applications.status,PASS,0 null values
+Required values: audit_events.entity_type,PASS,0 null values
+Required values: audit_events.entity_id,PASS,0 null values
+Required values: audit_events.action,PASS,0 null values
+Required values: audit_events.actor,PASS,0 null values
+Required values: candidate_skills.candidate_id,PASS,0 null values
+Required values: candidate_skills.skill_id,PASS,0 null values
+Required values: candidate_skills.proficiency,PASS,0 null values
+Required values: candidate_skills.is_primary,PASS,0 null values
+Required values: candidates.candidate_id,PASS,0 null values
+Required values: candidates.full_name,PASS,0 null values
+Required values: candidates.email,PASS,0 null values
+Required values: candidates.education,PASS,0 null values
+Required values: candidates.experience_years,PASS,0 null values
+Required values: candidates.status,PASS,0 null values
+Required values: departments.department_id,PASS,0 null values
+Required values: departments.name,PASS,0 null values
+Required values: departments.is_active,PASS,0 null values
+Required values: feedbacks.feedback_id,PASS,0 null values
+Required values: feedbacks.interview_id,PASS,0 null values
+Required values: feedbacks.interviewer_id,PASS,0 null values
+Required values: feedbacks.overall_score,PASS,0 null values
+Required values: feedbacks.recommendation,PASS,0 null values
+Required values: interview_panel_assignments.interview_id,PASS,0 null values
+Required values: interview_panel_assignments.interviewer_id,PASS,0 null values
+Required values: interview_panel_assignments.role,PASS,0 null values
+Required values: interview_panel_assignments.confirmed,PASS,0 null values
+Required values: interviewers.interviewer_id,PASS,0 null values
+Required values: interviewers.full_name,PASS,0 null values
+Required values: interviewers.email,PASS,0 null values
+Required values: interviewers.max_interviews_per_week,PASS,0 null values
+Required values: interviewers.is_active,PASS,0 null values
+Required values: interviews.interview_id,PASS,0 null values
+Required values: interviews.application_id,PASS,0 null values
+Required values: interviews.round_number,PASS,0 null values
+Required values: interviews.round_name,PASS,0 null values
+Required values: interviews.scheduled_start,PASS,0 null values
+Required values: interviews.scheduled_end,PASS,0 null values
+Required values: interviews.mode,PASS,0 null values
+Required values: interviews.status,PASS,0 null values
+Required values: job_requisitions.requisition_id,PASS,0 null values
+Required values: job_requisitions.department_id,PASS,0 null values
+Required values: job_requisitions.job_title,PASS,0 null values
+Required values: job_requisitions.employment_type,PASS,0 null values
+Required values: job_requisitions.openings,PASS,0 null values
+Required values: job_requisitions.currency,PASS,0 null values
+Required values: job_requisitions.experience_required,PASS,0 null values
+Required values: job_requisitions.remote_allowed,PASS,0 null values
+Required values: job_requisitions.status,PASS,0 null values
+Required values: offers.offer_id,PASS,0 null values
+Required values: offers.application_id,PASS,0 null values
+Required values: offers.offered_salary,PASS,0 null values
+Required values: offers.currency,PASS,0 null values
+Required values: offers.status,PASS,0 null values
+Required values: requisition_approvals.requisition_id,PASS,0 null values
+Required values: requisition_approvals.approver_name,PASS,0 null values
+Required values: requisition_approvals.decision,PASS,0 null values
+Required values: requisition_required_skills.requisition_id,PASS,0 null values
+Required values: requisition_required_skills.skill_id,PASS,0 null values
+Required values: requisition_required_skills.is_mandatory,PASS,0 null values
+Required values: resume_artifacts.resume_id,PASS,0 null values
+Required values: resume_artifacts.candidate_id,PASS,0 null values
+Required values: resume_artifacts.version,PASS,0 null values
+Required values: resume_artifacts.file_name,PASS,0 null values
+Required values: resume_artifacts.file_path,PASS,0 null values
+Required values: resume_artifacts.is_latest,PASS,0 null values
+Required values: screening_rules.rule_id,PASS,0 null values
+Required values: screening_rules.requisition_id,PASS,0 null values
+Required values: screening_rules.rule_type,PASS,0 null values
+Required values: screening_rules.rule_value,PASS,0 null values
+Required values: screening_rules.weight,PASS,0 null values
+Required values: screening_rules.is_knockout,PASS,0 null values
+Required values: screening_rules.is_active,PASS,0 null values
+Required values: skills.skill_id,PASS,0 null values
+Required values: skills.name,PASS,0 null values
+Required values: skills.category,PASS,0 null values
+Required values: skills.is_active,PASS,0 null values
+Record count: departments,PASS,"Expected 10, found 10"
+Record count: skills,PASS,"Expected 50, found 50"
+Record count: interviewers,PASS,"Expected 50, found 50"
+Record count: candidates,PASS,"Expected 2000, found 2000"
+Record count: job_requisitions,PASS,"Expected 100, found 100"
+Record count: applications,PASS,"Expected 3000, found 3000"
+Record count: interviews,PASS,"Expected 600, found 600"
+Record count: offers,PASS,"Expected 150, found 150"
+Duplicate applications,PASS,0 duplicate candidate-requisition pairs
+Offer salary within approved range,PASS,0 salary violations
+Interview date consistency,PASS,0 invalid interview time ranges
+Application requisition relationships,PASS,0 applications with missing requisitions
+Skill count within target range,PASS,Found 50; target is 30 to 50

@@ -1,0 +1,181 @@
+{
+    "description": "SHA-256 baseline checksums of existing recruitment exports.",
+    "total_files": 35,
+    "files": [
+        {
+            "filename": "application_stage_history.csv",
+            "size_bytes": 499681,
+            "sha256": "e59d7affa9c952d08f15762bb062f252153175a671d92aa357ec7b0d675b02b3"
+        },
+        {
+            "filename": "application_stage_history.json",
+            "size_bytes": 1561695,
+            "sha256": "12573bb0be19c63f907210ed62b4ebef43ac4aeff0cbdf378348f2d4d78ddce8"
+        },
+        {
+            "filename": "applications.csv",
+            "size_bytes": 461835,
+            "sha256": "3416ce8084de09ced138bc4aeed0fd1ad73a21b7fcfe015490f16bd5d714d348"
+        },
+        {
+            "filename": "applications.json",
+            "size_bytes": 1457245,
+            "sha256": "dce89ebb15e4e196742e4a2d0919c93e39cc342d1cec3d0ac7a75048246b50d3"
+        },
+        {
+            "filename": "audit_events.csv",
+            "size_bytes": 85,
+            "sha256": "da2b5257a31979882dc3e19d01a57a3d9cb396f3db9fcc6ac886d5f4ec25a5f2"
+        },
+        {
+            "filename": "audit_events.json",
+            "size_bytes": 2,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+            "filename": "candidate_skills.csv",
+            "size_bytes": 643279,
+            "sha256": "99316c085ac5809369a6a58ccdf6a9d89a04b2cfa45f06f789fabd953d5a84be"
+        },
+        {
+            "filename": "candidate_skills.json",
+            "size_bytes": 3099821,
+            "sha256": "745d4479816fe5b3d0c18474c25676e6cae7ccb2a995af86883c48d32a9f36a0"
+        },
+        {
+            "filename": "candidates.csv",
+            "size_bytes": 515022,
+            "sha256": "3b007b18013d2d4cfe734aa36cf94daf3cd49a9bb42a13fd36326cee7ca53fa3"
+        },
+        {
+            "filename": "candidates.json",
+            "size_bytes": 1478137,
+            "sha256": "8528bd887d7613134c4276c97b1a18b0c1683137e331dfe84584c40aa11b2909"
+        },
+        {
+            "filename": "departments.csv",
+            "size_bytes": 1343,
+            "sha256": "d99c15dd443f4cb4bb0ef4efbf66aa9a2ee110f6783318d26b583d760fab31a0"
+        },
+        {
+            "filename": "departments.json",
+            "size_bytes": 3889,
+            "sha256": "e0c53f065e1a69b62be4c388c1dde5390cf77c43d57fefbed1921f7f0046b0df"
+        },
+        {
+            "filename": "feedbacks.csv",
+            "size_bytes": 76288,
+            "sha256": "00cc884b0435cf8746852889b227c9154544abdc07ca9e87c0e377c1e89ba276"
+        },
+        {
+            "filename": "feedbacks.json",
+            "size_bytes": 222867,
+            "sha256": "876446df0ec8abfc192da7784864a66cf93a616aaa2daf5bb230a9dec0ade043"
+        },
+        {
+            "filename": "interview_panel_assignments.csv",
+            "size_bytes": 48920,
+            "sha256": "dd9df6de22be47a52944cbac8c1754a484c170eb4aa138c100a516b1008ba426"
+        },
+        {
+            "filename": "interview_panel_assignments.json",
+            "size_bytes": 232464,
+            "sha256": "6eef939de79244c802ae097241956f5226c4555547d3d98c4f6ffe293ecee6b3"
+        },
+        {
+            "filename": "interviewers.csv",
+            "size_bytes": 7130,
+            "sha256": "55a4239e6550062fa82dd5d272d7266c19122637ad4dc2ae61c8d9f0f1ea452b"
+        },
+        {
+            "filename": "interviewers.json",
+            "size_bytes": 23344,
+            "sha256": "51c44976d1d5975242498bd0aa4352ec0ebda7ba0aa7f8055753989d925ce8a4"
+        },
+        {
+            "filename": "interviews.csv",
+            "size_bytes": 107691,
+            "sha256": "9224f3fcd391c5ba1de246f9296f22e842119bbe6ea6f8b0b29fc93069f68045"
+        },
+        {
+            "filename": "interviews.json",
+            "size_bytes": 384087,
+            "sha256": "10f1d32214c3a6ffb4701f68519ab795adb9d9ea90fa9b6b3f6d09d44578d5af"
+        },
+        {
+            "filename": "job_requisitions.csv",
+            "size_bytes": 28738,
+            "sha256": "696a294ca9026fb99565d7856284efa0ee2ea1977b04d3ae7dc170418daa857a"
+        },
+        {
+            "filename": "job_requisitions.json",
+            "size_bytes": 77065,
+            "sha256": "820da260c0a784703de9f5a2a1343626232beb6f8fda713dddb37a9c76083ebb"
+        },
+        {
+            "filename": "offers.csv",
+            "size_bytes": 35813,
+            "sha256": "7310e502df6efb2284ffdb718112a83c395994f5782e05b1608e1338b297a878"
+        },
+        {
+            "filename": "offers.json",
+            "size_bytes": 120105,
+            "sha256": "4ae657a8f55c975decb96548dbe9d400acab468d58ba9cf3c0522618dd6e150f"
+        },
+        {
+            "filename": "recruitment_database.sql",
+            "size_bytes": 4254867,
+            "sha256": "66c78a5624ecc38b39aa882ed51a619b72db8322f73c4b06388085ed0dea41d6"
+        },
+        {
+            "filename": "requisition_approvals.csv",
+            "size_bytes": 7624,
+            "sha256": "5f8df1e2405a07a7e3f50478bfa13e04aa3abfdae2a13679ffcab0f80cb6f53d"
+        },
+        {
+            "filename": "requisition_approvals.json",
+            "size_bytes": 21537,
+            "sha256": "5f4b822f9216a78d409fcab593913e67e904a43eaad38db48a3c8c227e9b4882"
+        },
+        {
+            "filename": "requisition_required_skills.csv",
+            "size_bytes": 10000,
+            "sha256": "403780e690e5c9201f62fa5a8ba90f63bbeeae6969ac25218fae9b1b32e29d63"
+        },
+        {
+            "filename": "requisition_required_skills.json",
+            "size_bytes": 70982,
+            "sha256": "f3448596f5f66c290a1802f199744e12ac4b365a96d11c8692d17b2e5484abbb"
+        },
+        {
+            "filename": "resume_artifacts.csv",
+            "size_bytes": 253725,
+            "sha256": "ee8f4a9473dd4daf3f8a2e28a36e6a5b791ff2100e0558021203447f888fbc60"
+        },
+        {
+            "filename": "resume_artifacts.json",
+            "size_bytes": 875601,
+            "sha256": "e0696e50fe3ae71f57f4898d626427023124255c41cfeb5e78f0d02a0b74483b"
+        },
+        {
+            "filename": "screening_rules.csv",
+            "size_bytes": 34168,
+            "sha256": "151ad4c97802294584599715f2958ed5a969f7f6426ba2f8f77a61d8ef98bf80"
+        },
+        {
+            "filename": "screening_rules.json",
+            "size_bytes": 109671,
+            "sha256": "ce047425364baf5006729c4159e8060ffd41c825a646f8a7790b1cc350337083"
+        },
+        {
+            "filename": "skills.csv",
+            "size_bytes": 3600,
+            "sha256": "44d7571f9b3fdc58b4c87c6f2d4ac580bb02fd5de246052e4f6af64d940be40e"
+        },
+        {
+            "filename": "skills.json",
+            "size_bytes": 12193,
+            "sha256": "7ee1c9892f483b116d05d484362e2fdf17a57948a3b8ef4560f22cf53cada8b4"
+        }
+    ]
+}

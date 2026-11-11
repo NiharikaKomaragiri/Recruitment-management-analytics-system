@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────
+# Recruitment Management & Analytics System
+# Python Dependencies
+# ─────────────────────────────────────────────
+
+# Web Framework & Server
+fastapi
+uvicorn[standard]
+
+# Database ORM
+sqlalchemy
+
+# Data Processing & Analytics
+pandas
+numpy
+
+# Synthetic Data Generation
+faker
+
+# Testing
+pytest
+httpx
+
+# Dashboard / Visualization
+streamlit

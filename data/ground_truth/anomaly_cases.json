@@ -1,0 +1,57 @@
+[
+    {
+        "anomaly_id": "ANOM-001",
+        "anomaly_type": "INTERVIEWER_UNAVAILABLE",
+        "entity_type": "Interview",
+        "entity_id": "INT-2026-000001",
+        "related_entity_id": "INTVR-000029",
+        "description": "Synthetic conflicting interview scheduled for an interviewer already occupied.",
+        "expected_rule": "An interviewer cannot attend two interviews at overlapping times.",
+        "observed_value": "Proposed conflicting slot: 2026-01-05 09:00:00 to 2026-01-05 10:00:00",
+        "is_anomaly": true
+    },
+    {
+        "anomaly_id": "ANOM-002",
+        "anomaly_type": "DUPLICATE_APPLICATION",
+        "entity_type": "Application",
+        "entity_id": "APP-REQ-2026-000092-CAND-000723",
+        "related_entity_id": "CAND-000723",
+        "description": "Synthetic second application created for the same candidate and requisition.",
+        "expected_rule": "A candidate should not apply twice to the same requisition.",
+        "observed_value": "Duplicate of APP-REQ-2026-000092-CAND-000723",
+        "is_anomaly": true
+    },
+    {
+        "anomaly_id": "ANOM-003",
+        "anomaly_type": "MISSING_FEEDBACK",
+        "entity_type": "Application",
+        "entity_id": "APP-REQ-2026-000013-CAND-001708",
+        "related_entity_id": null,
+        "description": "Synthetic case: application advanced without required interview feedback.",
+        "expected_rule": "Feedback must be recorded before advancement.",
+        "observed_value": "Synthetic missing feedback case",
+        "is_anomaly": true
+    },
+    {
+        "anomaly_id": "ANOM-004",
+        "anomaly_type": "SALARY_OUTSIDE_APPROVED_BAND",
+        "entity_type": "Offer",
+        "entity_id": "OFF-2026-000001",
+        "related_entity_id": "REQ-2026-000029",
+        "description": "Synthetic offer salary exceeds the approved requisition salary range.",
+        "expected_rule": "Offered salary must remain within the approved minimum and maximum salary.",
+        "observed_value": "Proposed salary: 1125000.0; maximum allowed: 900000.0",
+        "is_anomaly": true
+    },
+    {
+        "anomaly_id": "ANOM-005",
+        "anomaly_type": "CLOSED_REQUISITION_ACTIVE_APPLICATION",
+        "entity_type": "JobRequisition",
+        "entity_id": "REQ-2026-000002",
+        "related_entity_id": "SYN-ACTIVE-APP-001",
+        "description": "Synthetic active application associated with a closed requisition.",
+        "expected_rule": "A closed requisition must not have active applications.",
+        "observed_value": "Requisition status: CLOSED; application reference: SYN-ACTIVE-APP-001",
+        "is_anomaly": true
+    }
+]
